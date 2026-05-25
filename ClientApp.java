@@ -112,7 +112,7 @@ public class ClientApp {
                                     }
                                     Thread.sleep(1000);
                                     wait_stamp = System.currentTimeMillis();
-                                    if((wait_stamp - active_stamp)/1000 > 5){
+                                    if((wait_stamp - active_stamp)/1000 > 90){
                                         server.handleDesconnection(callback);
                                         System.exit(-1);
                                     }
