@@ -10,7 +10,6 @@ public interface Server extends Remote {
     void broadcast(int action, Client sender, int... indexes) throws RemoteException;
     void handleDesconnection(RemoteException e) throws RemoteException; 
     void handleDesconnection(Client callback) throws RemoteException; 
-    void handleEndGame() throws RemoteException;
     boolean gameOn() throws RemoteException;
     String turnTitle() throws RemoteException;
     int getTurn() throws RemoteException;

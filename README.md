@@ -13,7 +13,7 @@ Para executar o client, abra outro terminal e execute:
 ### Sobre o jogo
 - O jogo só inicia se dois clients estiverem conectados;
 - O jogo pode ter até 2 jogadores ao mesmo tempo! Qualquer outro jogador que tente logar será barrado;
-- O jogador que estiver ativo tem 90 segundos para escolher uma ação, após isso, será dado como desconectado e o jogo será encerrado;
+- O jogador que estiver ativo tem 90 segundos para escolher uma ação, após isso, será dado como desconectado;
 - Se o outro jogador for desconectado, o jogo será encerrado após o jogador ativo executar alguma ação.
 ### Menu
 1. Ver Mapa
@@ -30,5 +30,5 @@ Para executar o client, abra outro terminal e execute:
     3. Mover tropas entre territórios.
 5. Atacar um território inimigo.
 6. Passar seu turno.
-### 
-
+### Vencendo o jogo
+O jogo acaba quando algum jogador conquistou todos os territorios.

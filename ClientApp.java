@@ -103,7 +103,7 @@ public class ClientApp {
                                             break;
                                     }
                                     if (action == 6) updated_turn = false;
-                                    if(!server.gameOn()) server.handleEndGame();
+                                    if(!server.gameOn()) System.exit(0); 
                                 }
                                 else {
                                     if (!updated_turn) {
@@ -112,8 +112,7 @@ public class ClientApp {
                                     }
                                     Thread.sleep(1000);
                                     wait_stamp = System.currentTimeMillis();
-                                    System.out.println((wait_stamp - active_stamp)/1000);
-                                    if((wait_stamp - active_stamp)/1000 > 30){
+                                    if((wait_stamp - active_stamp)/1000 > 5){
                                         server.handleDesconnection(callback);
                                         System.exit(-1);
                                     }
@@ -121,7 +120,7 @@ public class ClientApp {
                                 }
                             }
                             System.out.println("O Jogo será finalizado!");
-                            return;
+                            System.exit(0);
                         }
                         else if(!updated_amount){
                             System.out.println("Esperando outro jogador!");

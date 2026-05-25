@@ -153,7 +153,6 @@ public class ServerImpl extends UnicastRemoteObject implements Server {
                 client.feedback("Um jogador se desconectou.\nO jogo será encerrado");
         }
         Game.force_finish();
-        handleEndGame();
     }
     @Override
     public synchronized void handleDesconnection(Client callback) throws RemoteException {
@@ -161,12 +160,5 @@ public class ServerImpl extends UnicastRemoteObject implements Server {
                 client.feedback("Um jogador se desconectou.\nO jogo será encerrado");
         }
         Game.force_finish();
-        handleEndGame();
-    }
-    @Override
-    public synchronized void handleEndGame() throws RemoteException {
-        this.Game = new game();
-        clients = new ArrayList<Client>();
-        System.out.println(clients.size());
     }
 }
